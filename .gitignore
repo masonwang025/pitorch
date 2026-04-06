@@ -1,0 +1,60 @@
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# backup files
+*.bak
+
+# build artifacts
+*.o
+*.d
+*.bin
+*.elf
+*.list
+*.a
+objs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# model weights
+weights/
+*.model
+
+# host build artifacts
+dev/host/generate
+dev/host/test_forward
+dev/host/test_stage_forward
+dev/host/test_tokenizer
+dev/host/test_generate_host
+dev/host/test_sampler
+dev/host/test_train
+dev/host/test_train_interactive
+dev/host/test_train_forward
+dev/host/test_train_profiled
+dev/host/test_stage_train
+dev/host/test_stage_train_4pi
+dev/host/expected.txt
+
+# example logs (overwritten each run)
+examples/logs/*
+!examples/logs/.gitkeep
+
+# trace runs (keep viewer.html and .gitkeep)
+traces/runs/*
+!traces/runs/.gitkeep
+
+# blog (private drafts/writeups)
+.blog/
+
+# temp files
+_temp/*

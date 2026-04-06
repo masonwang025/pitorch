@@ -1,0 +1,22 @@
+CC = gcc
+CFLAGS = -O2 -Wall -I../../../pitorch -I../../../pitorch/model -I../../../pitorch/ops/core -I../../../pitorch/ops/matvec -I../../../pitorch/train -I../../../pitorch/profiler
+
+SRCS = test_shard_train.c \
+       ../../../pitorch/pt.c \
+       ../../../pitorch/model/llama2.c \
+       ../../../pitorch/model/pt_shard.c \
+       ../../../pitorch/ops/core/pt_ops.c \
+       ../../../pitorch/ops/core/pt_math.c \
+       ../../../pitorch/train/pt_train.c \
+       ../../../pitorch/train/pt_backward_ops.c \
+       ../../../pitorch/profiler/trace.c
+
+TARGET = test_shard_train
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) -o $@ $(SRCS) -lm
+
+clean:
+	rm -f $(TARGET)
+
+.PHONY: clean

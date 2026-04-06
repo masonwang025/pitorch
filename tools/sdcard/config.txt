@@ -1,0 +1,12 @@
+gpu_mem=64
+
+arm_freq=700
+core_freq=250
+
+enable_uart=1
+uart_2ndstage=1
+
+kernel=kernel.img
+kernel_address=0x8000
+
+initramfs weights/stories15M_full.bin 0x2000000
